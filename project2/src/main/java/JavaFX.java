@@ -26,6 +26,7 @@ public class JavaFX extends Application {
 	Font titleFont, tempFont, weatherFont, degreeFont;
 	Text degreeSymbol;
 	StackPane degreePane;
+	Scene basicScene, forecastScene;
 	Button more;
 
 	public static void main(String[] args) {
@@ -85,8 +86,9 @@ public class JavaFX extends Application {
 		root.setAlignment(Pos.CENTER);
 
 		// set up the scene and show the stage
-		Scene scene = new Scene(root, 375, 667);
-		primaryStage.setScene(scene);
+		basicScene = new Scene(root, 375, 667);
+		forecastScene = new Scene(root, 375, 667);
+		primaryStage.setScene(basicScene);
 		primaryStage.show();
 	}
 
