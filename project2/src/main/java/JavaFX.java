@@ -20,13 +20,12 @@ import weather.WeatherAPI;
 import java.util.ArrayList;
 
 public class JavaFX extends Application {
-	Label titleLabel, temperature, weather, threeDayForecast, firstDayName, dayLabel, nightLabel, precipitation, dayTemperature, nightTemperature;
-	VBox tempBox, root, forecastBox, root2, nightAndTempVBox, dayAndTempVBox, dayAndPrecipVbox;
-	HBox firstDayWeatherHbox;
-	Font titleFont, tempFont, weatherFont, degreeFont, title2ndSceneFont, DayFonts;
+	Label titleLabel, temperature, weather;
+	VBox tempBox, root;
+	Font titleFont, tempFont, weatherFont, degreeFont;
 	Text degreeSymbol;
 	StackPane degreePane;
-	Scene basicScene, forecastScene;
+	Scene mainScene, forecastScene;
 	Button more;
 	ImageView weatherIcon;
 
@@ -34,34 +33,7 @@ public class JavaFX extends Application {
 
 		launch(args);
 	}
-	private HBox threeDays(int day, ArrayList<Period> forecast) {
-		int i = 0;
-		firstDayWeatherHbox = new HBox(90);
-		firstDayName = new Label(forecast.get(day).name);
-		firstDayName.setFont(DayFonts);
-		precipitation = new Label(String.valueOf(forecast.get(day).probabilityOfPrecipitation.value)+"%");
-		precipitation.setFont(DayFonts);
-		dayAndPrecipVbox = new VBox(10);
-		dayTemperature = new Label(String.valueOf(forecast.get(day).temperature));
-		nightTemperature = new Label(String.valueOf(forecast.get(day+1).temperature));
-		dayTemperature.setFont(DayFonts);
-		nightTemperature.setFont(DayFonts);
-		dayLabel = new Label("Day");
-		dayLabel.setFont(DayFonts);
-		nightLabel = new Label("Night");
-		nightLabel.setFont(DayFonts);
-		nightAndTempVBox = new VBox(10);
-		dayAndTempVBox = new VBox(10);
-		nightAndTempVBox.getChildren().addAll(nightLabel, nightTemperature);
-		dayAndTempVBox.getChildren().addAll(dayLabel,dayTemperature);
-		//dayAndPrecipVbox.setAlignment(Pos.CENTER_LEFT);
-		//dayAndTempVBox.setAlignment(Pos.TOP_CENTER);
-		//nightAndTempVBox.setAlignment(Pos.BASELINE_RIGHT);
-		dayAndPrecipVbox.getChildren().addAll(firstDayName, precipitation);
-		firstDayWeatherHbox.getChildren().addAll(dayAndPrecipVbox, dayAndTempVBox, nightAndTempVBox);
-		//firstDayWeatherHbox.setAlignment(Pos.CENTER);
-		return firstDayWeatherHbox;
-	}
+
 	//feel free to remove the starter code from this method
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -113,30 +85,23 @@ public class JavaFX extends Application {
 		tempBox.getChildren().addAll(titleLabel, degreePane, weather, weatherIcon);
 		tempBox.setAlignment(Pos.CENTER);
 
-		more = new Button("More");
+		more = new Button("3-Day Forecast");
 		more.setAlignment(Pos.CENTER);
-		more.setOnAction(e -> {primaryStage.setScene(forecastScene);});
-		title2ndSceneFont = Font.font("Arial",FontWeight.BOLD, FontPosture.REGULAR, 25);
-		DayFonts =  Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
-		threeDayForecast = new Label("3-Day Forecast");
-		threeDayForecast.setFont(title2ndSceneFont);
-		threeDayForecast.setTextAlignment(TextAlignment.CENTER);
-
-		forecastBox = new VBox(150);
-		forecastBox.getChildren().addAll(threeDayForecast, threeDays(1, forecast), threeDays(3, forecast), threeDays(5, forecast));
-		forecastBox.setAlignment(Pos.CENTER);
 
 		root = new VBox(100);
 		root.getChildren().addAll(tempBox, more);
 		root.setAlignment(Pos.CENTER);
-		root2 = new VBox(100);
-		root2.getChildren().addAll(forecastBox);
 
 		// set up the scene and show the stage
-		basicScene = new Scene(root, 375, 667);
+		mainScene = new Scene(root, 375, 667);
 
-		forecastScene = new Scene(root2, 375, 667);
-		primaryStage.setScene(basicScene);
+		// set up the 3-day forecast scene
+		ThreeDayForecast threeDayForecast = new ThreeDayForecast(forecast, primaryStage, mainScene);
+		forecastScene = threeDayForecast.getScene();
+
+		more.setOnAction(e -> {primaryStage.setScene(forecastScene);});
+
+		primaryStage.setScene(mainScene);
 		primaryStage.show();
 	}
 
