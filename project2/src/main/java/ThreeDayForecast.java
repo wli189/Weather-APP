@@ -31,7 +31,6 @@ public class ThreeDayForecast {
         dayFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
         precipitationLabelFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 15);
         valueFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 15);
-
         threeDayForecast = new Label("3-Day Forecast");
         threeDayForecast.setFont(titleFont);
         threeDayForecast.setAlignment(Pos.CENTER);
@@ -39,17 +38,18 @@ public class ThreeDayForecast {
         backButton = new Button("Back To Today");
         backButton.setOnAction(e -> {primaryStage.setScene(mainScene);});
 
-        forecastBox = new VBox(50);
+        forecastBox = new VBox(30);
         forecastBox.getChildren().addAll(
                 threeDayForecast,
                 createDayForecast(0, forecast),
                 createDayForecast(2, forecast),
                 createDayForecast(4, forecast),
+                createDayForecast(6, forecast),
                 backButton
         );
         forecastBox.setAlignment(Pos.CENTER);
 
-        forecastScene = new Scene(forecastBox, 375, 667);
+        forecastScene = new Scene(forecastBox, 375, 750);
     }
 
     private HBox createDayForecast(int day, ArrayList<Period> forecast) {

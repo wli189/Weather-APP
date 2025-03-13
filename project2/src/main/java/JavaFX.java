@@ -93,7 +93,7 @@ public class JavaFX extends Application {
 		root.setAlignment(Pos.CENTER);
 
 		// set up the scene and show the stage
-		mainScene = new Scene(root, 375, 667);
+		mainScene = new Scene(root, 375, 750);
 
 		// set up the 3-day forecast scene
 		ThreeDayForecast threeDayForecast = new ThreeDayForecast(forecast, primaryStage, mainScene);
