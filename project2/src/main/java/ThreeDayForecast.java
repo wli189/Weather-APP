@@ -20,7 +20,7 @@ public class ThreeDayForecast {
     VBox forecastBox, dayAndPrecipVBox, dayTempVBox, nightTempVBox;
     Scene forecastScene;
     Font titleFont, dayFont, precipitationLabelFont, valueFont;
-    Label threeDayForecast, dayName, precipitation, dayTemp, nightTemp, precipitationLabel, dayLabel, nightLabel;
+    Label threeDayForecast, dayName, precipitationDay, precipitationNight, dayTemp, nightTemp, precipitationLabel, dayLabel, nightLabel;
     HBox dayForecastBox;
     Button backButton;
     ImageView dayIcon, nightIcon, precipitationIcon;
@@ -29,8 +29,8 @@ public class ThreeDayForecast {
     public ThreeDayForecast(ArrayList<Period> forecast, Stage primaryStage, Scene mainScene) {
         titleFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 25);
         dayFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
-        precipitationLabelFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 10);
-        valueFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 10);
+        precipitationLabelFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 15);
+        valueFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 15);
 
         threeDayForecast = new Label("3-Day Forecast");
         threeDayForecast.setFont(titleFont);
@@ -70,8 +70,10 @@ public class ThreeDayForecast {
 
         precipitationLabel = new Label("Chance of Precipitation");
         precipitationLabel.setFont(precipitationLabelFont);
-        precipitation = new Label(forecast.get(day).probabilityOfPrecipitation.value + "%");
-        precipitation.setFont(valueFont);
+        precipitationDay = new Label("Day:" + forecast.get(day).probabilityOfPrecipitation.value + "%");
+        precipitationDay.setFont(valueFont);
+        precipitationNight = new Label("Night:" + forecast.get(day + 1).probabilityOfPrecipitation.value + "%");
+        precipitationNight.setFont(valueFont);
 
         dayTemp = new Label(forecast.get(day).temperature + "°" + String.valueOf(forecast.get(0).temperatureUnit));
         dayTemp.setFont(valueFont);
@@ -89,7 +91,7 @@ public class ThreeDayForecast {
         precipitationIcon.setFitWidth(20);
         precipitationIcon.setPreserveRatio(true);
 
-        dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitation);
+        dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitationDay, precipitationNight);
         dayTempVBox = new VBox(10, dayLabel, dayTemp, dayIcon);
         nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
 
