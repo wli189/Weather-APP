@@ -25,6 +25,7 @@ public class ThreeDayForecast {
     Button backButton;
     ImageView dayIcon, nightIcon, precipitationIcon;
     Region space1, space2;
+    boolean isDay;
 
     public ThreeDayForecast(ArrayList<Period> forecast, Stage primaryStage, Scene mainScene) {
         titleFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 25);
@@ -38,15 +39,29 @@ public class ThreeDayForecast {
         backButton = new Button("Back To Today");
         backButton.setOnAction(e -> {primaryStage.setScene(mainScene);});
 
+        isDay = forecast.get(0).isDaytime;
+
         forecastBox = new VBox(30);
-        forecastBox.getChildren().addAll(
-                threeDayForecast,
-                createDayForecast(0, forecast),
-                createDayForecast(2, forecast),
-                createDayForecast(4, forecast),
-                createDayForecast(6, forecast),
-                backButton
-        );
+        if (isDay) {
+            forecastBox.getChildren().addAll(
+                    threeDayForecast,
+                    createDayForecast(0, forecast),
+                    createDayForecast(2, forecast),
+                    createDayForecast(4, forecast),
+                    createDayForecast(6, forecast),
+                    backButton
+            );
+        } else {
+            forecastBox.getChildren().addAll(
+                    threeDayForecast,
+                    createDayForecast(0, forecast),
+                    createDayForecast(1, forecast),
+                    createDayForecast(3, forecast),
+                    createDayForecast(5, forecast),
+                    backButton
+            );
+        }
+
         forecastBox.setAlignment(Pos.CENTER);
 
         forecastScene = new Scene(forecastBox, 375, 750);
@@ -60,6 +75,8 @@ public class ThreeDayForecast {
         space2 = new Region();
         space1.setMinWidth(50);
         space2.setMinWidth(30);
+
+        isDay = forecast.get(day).isDaytime;
 
         dayName = new Label(forecast.get(day).name);
         dayName.setFont(dayFont);
@@ -78,25 +95,47 @@ public class ThreeDayForecast {
         dayTemp = new Label(forecast.get(day).temperature + "°" + String.valueOf(forecast.get(0).temperatureUnit));
         dayTemp.setFont(valueFont);
 
-        nightTemp = new Label(forecast.get(day + 1).temperature + "°" + String.valueOf(forecast.get(0).temperatureUnit) );
+        nightTemp = new Label(forecast.get(day + 1).temperature + "°" + String.valueOf(forecast.get(0).temperatureUnit));
         nightTemp.setFont(valueFont);
 
         dayIcon = new ImageView(new Image(forecast.get(day).icon));
         dayIcon.setFitWidth(50);
         dayIcon.setPreserveRatio(true);
-        nightIcon= new ImageView(new Image(forecast.get(day + 1).icon));
+        nightIcon = new ImageView(new Image(forecast.get(day + 1).icon));
         nightIcon.setFitWidth(50);
         nightIcon.setPreserveRatio(true);
         precipitationIcon = new ImageView(new Image("file:./assets/icons/rain.png"));
         precipitationIcon.setFitWidth(20);
         precipitationIcon.setPreserveRatio(true);
 
+        if (!isDay) {
+            space1.setMinWidth(130);
+            precipitationNight = new Label("Night:" + forecast.get(day).probabilityOfPrecipitation.value + "%");
+            precipitationNight.setFont(valueFont);
+
+            nightTemp = new Label(forecast.get(day).temperature + "°" + String.valueOf(forecast.get(0).temperatureUnit));
+            nightTemp.setFont(valueFont);
+
+            nightIcon = new ImageView(new Image(forecast.get(day).icon));
+            nightIcon.setFitWidth(50);
+            nightIcon.setPreserveRatio(true);
+            precipitationIcon = new ImageView(new Image("file:./assets/icons/rain.png"));
+            precipitationIcon.setFitWidth(20);
+            precipitationIcon.setPreserveRatio(true);
+
+            dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitationNight);
+            nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
+
+            dayForecastBox.getChildren().addAll(dayAndPrecipVBox, space1, nightTempVBox);
+            return dayForecastBox;
+        }
+
         dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitationDay, precipitationNight);
         dayTempVBox = new VBox(10, dayLabel, dayTemp, dayIcon);
         nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
 
         dayForecastBox.getChildren().addAll(dayAndPrecipVBox, space1, dayTempVBox, space2, nightTempVBox);
-        dayForecastBox.setPadding(new Insets(0,20,0,20));
+        dayForecastBox.setPadding(new Insets(0, 20, 0, 20));
         return dayForecastBox;
     }
 
