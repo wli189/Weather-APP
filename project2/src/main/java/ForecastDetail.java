@@ -19,11 +19,11 @@ public class ForecastDetail {
         detailBox = new VBox(20);
         detailBox.setAlignment(Pos.CENTER);
 
-        // Back button
-        backButton = new Button("Back");
+        // back button
+        backButton = new Button("Back To 3-Day Forecast");
         backButton.setOnAction(e -> primaryStage.setScene(forecastScene));
 
-        // Add all elements to the VBox
+        // add all elements to the VBox
         detailBox.getChildren().addAll(
                 backButton
         );
