@@ -18,11 +18,11 @@ import java.util.ArrayList;
 
 public class ThreeDayForecast {
     VBox forecastBox, dayAndPrecipVBox, dayTempVBox, nightTempVBox;
-    Scene forecastScene;
+    Scene forecastScene, detailScene;
     Font titleFont, dayFont, precipitationLabelFont, valueFont;
     Label threeDayForecast, dayName, precipitationDay, precipitationNight, dayTemp, nightTemp, precipitationLabel, dayLabel, nightLabel;
     HBox dayForecastBox;
-    Button backButton;
+    Button backButton, dayForecastButton;
     ImageView dayIcon, nightIcon, precipitationIcon;
     Region space1, space2;
     boolean isDay;
@@ -45,19 +45,19 @@ public class ThreeDayForecast {
         if (isDay) {
             forecastBox.getChildren().addAll(
                     threeDayForecast,
-                    createDayForecast(0, forecast),
-                    createDayForecast(2, forecast),
-                    createDayForecast(4, forecast),
-                    createDayForecast(6, forecast),
+                    createDayForecast(0, forecast, primaryStage),
+                    createDayForecast(2, forecast, primaryStage),
+                    createDayForecast(4, forecast, primaryStage),
+                    createDayForecast(6, forecast, primaryStage),
                     backButton
             );
         } else {
             forecastBox.getChildren().addAll(
                     threeDayForecast,
-                    createDayForecast(0, forecast),
-                    createDayForecast(1, forecast),
-                    createDayForecast(3, forecast),
-                    createDayForecast(5, forecast),
+                    createDayForecast(0, forecast, primaryStage),
+                    createDayForecast(1, forecast, primaryStage),
+                    createDayForecast(3, forecast, primaryStage),
+                    createDayForecast(5, forecast, primaryStage),
                     backButton
             );
         }
@@ -65,9 +65,13 @@ public class ThreeDayForecast {
         forecastBox.setAlignment(Pos.CENTER);
 
         forecastScene = new Scene(forecastBox, 375, 750);
+
+        // set up more detail scene
+        ForecastDetail forecastDetail = new ForecastDetail(forecast, primaryStage, forecastScene);
+        detailScene = forecastDetail.getScene();
     }
 
-    private HBox createDayForecast(int day, ArrayList<Period> forecast) {
+    private Button createDayForecast(int day, ArrayList<Period> forecast, Stage primaryStage) {
         dayForecastBox = new HBox();
         dayForecastBox.setAlignment(Pos.CENTER);
 
@@ -127,7 +131,11 @@ public class ThreeDayForecast {
             nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
 
             dayForecastBox.getChildren().addAll(dayAndPrecipVBox, space1, nightTempVBox);
-            return dayForecastBox;
+            dayForecastButton = new Button("",dayForecastBox);
+            dayForecastButton.setOnAction(e -> {
+                primaryStage.setScene(detailScene);
+            });
+            return dayForecastButton;
         }
 
         dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitationDay, precipitationNight);
@@ -135,8 +143,11 @@ public class ThreeDayForecast {
         nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
 
         dayForecastBox.getChildren().addAll(dayAndPrecipVBox, space1, dayTempVBox, space2, nightTempVBox);
-        dayForecastBox.setPadding(new Insets(0, 20, 0, 20));
-        return dayForecastBox;
+        dayForecastButton = new Button("",dayForecastBox);
+        dayForecastButton.setOnAction(e -> {
+            primaryStage.setScene(detailScene);
+        });
+        return dayForecastButton;
     }
 
     public Scene getScene() {
