@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import weather.Period;
 
@@ -14,10 +15,14 @@ public class ForecastDetail {
     Scene detailScene;
     VBox detailBox;
     Button backButton;
+    boolean isDay;
 
-    public ForecastDetail(ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene) {
+
+    public ForecastDetail(ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene, int day) {
         detailBox = new VBox(20);
         detailBox.setAlignment(Pos.CENTER);
+
+        isDay = forecast.get(day).isDaytime;
 
         // back button
         backButton = new Button("Back To 3-Day Forecast");

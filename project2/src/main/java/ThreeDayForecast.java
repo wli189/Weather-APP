@@ -42,36 +42,35 @@ public class ThreeDayForecast {
         isDay = forecast.get(0).isDaytime;
 
         forecastBox = new VBox(30);
+        forecastBox.setAlignment(Pos.CENTER);
+        forecastScene = new Scene(forecastBox, 375, 750);
+
         if (isDay) {
             forecastBox.getChildren().addAll(
                     threeDayForecast,
-                    createDayForecast(0, forecast, primaryStage),
-                    createDayForecast(2, forecast, primaryStage),
-                    createDayForecast(4, forecast, primaryStage),
-                    createDayForecast(6, forecast, primaryStage),
+                    createDayForecast(0, forecast, primaryStage, forecastScene),
+                    createDayForecast(2, forecast, primaryStage, forecastScene),
+                    createDayForecast(4, forecast, primaryStage, forecastScene),
+                    createDayForecast(6, forecast, primaryStage, forecastScene),
                     backButton
             );
         } else {
             forecastBox.getChildren().addAll(
                     threeDayForecast,
-                    createDayForecast(0, forecast, primaryStage),
-                    createDayForecast(1, forecast, primaryStage),
-                    createDayForecast(3, forecast, primaryStage),
-                    createDayForecast(5, forecast, primaryStage),
+                    createDayForecast(0, forecast, primaryStage, forecastScene),
+                    createDayForecast(1, forecast, primaryStage, forecastScene),
+                    createDayForecast(3, forecast, primaryStage, forecastScene),
+                    createDayForecast(5, forecast, primaryStage, forecastScene),
                     backButton
             );
         }
-
-        forecastBox.setAlignment(Pos.CENTER);
-
-        forecastScene = new Scene(forecastBox, 375, 750);
-
-        // set up more detail scene
-        ForecastDetail forecastDetail = new ForecastDetail(forecast, primaryStage, forecastScene);
-        detailScene = forecastDetail.getScene();
     }
 
-    private Button createDayForecast(int day, ArrayList<Period> forecast, Stage primaryStage) {
+    private Button createDayForecast(int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene) {
+        // set up more detail scene
+        ForecastDetail forecastDetail = new ForecastDetail(forecast, primaryStage, forecastScene, day);
+        detailScene = forecastDetail.getScene();
+
         dayForecastBox = new HBox();
         dayForecastBox.setAlignment(Pos.CENTER);
 
