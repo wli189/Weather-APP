@@ -21,17 +21,17 @@ public class ThreeDayForecast {
     Scene forecastScene, detailScene;
     Font titleFont, dayFont, precipitationLabelFont, valueFont;
     Label threeDayForecast, dayName, precipitationDay, precipitationNight, dayTemp, nightTemp, precipitationLabel, dayLabel, nightLabel;
-    HBox dayForecastBox;
+    HBox dayForecastBox, labelWithIcon;
     Button backButton, dayForecastButton;
     ImageView dayIcon, nightIcon, precipitationIcon;
     Region space1, space2;
     boolean isDay;
 
     public ThreeDayForecast(ArrayList<Period> forecast, Stage primaryStage, Scene mainScene) {
-        titleFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 25);
-        dayFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
-        precipitationLabelFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 15);
-        valueFont = Font.font("Arial", FontWeight.NORMAL, FontPosture.REGULAR, 15);
+        titleFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
+        dayFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
+        precipitationLabelFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
+        valueFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
         threeDayForecast = new Label("3-Day Forecast");
         threeDayForecast.setFont(titleFont);
         threeDayForecast.setAlignment(Pos.CENTER);
@@ -88,8 +88,13 @@ public class ThreeDayForecast {
         nightLabel = new Label("Night");
         nightLabel.setFont(dayFont);
 
+        precipitationIcon = new ImageView(new Image("file:./assets/icons/rain.png"));
+        precipitationIcon.setFitWidth(20);
+        precipitationIcon.setPreserveRatio(true);
+
         precipitationLabel = new Label("Chance of Precipitation");
         precipitationLabel.setFont(precipitationLabelFont);
+        labelWithIcon = new HBox(5, precipitationLabel, precipitationIcon);
         precipitationDay = new Label("Day:" + forecast.get(day).probabilityOfPrecipitation.value + "%");
         precipitationDay.setFont(valueFont);
         precipitationNight = new Label("Night:" + forecast.get(day + 1).probabilityOfPrecipitation.value + "%");
@@ -107,9 +112,6 @@ public class ThreeDayForecast {
         nightIcon = new ImageView(new Image(forecast.get(day + 1).icon));
         nightIcon.setFitWidth(50);
         nightIcon.setPreserveRatio(true);
-        precipitationIcon = new ImageView(new Image("file:./assets/icons/rain.png"));
-        precipitationIcon.setFitWidth(20);
-        precipitationIcon.setPreserveRatio(true);
 
         if (!isDay) {
             space1.setMinWidth(130);
@@ -122,11 +124,8 @@ public class ThreeDayForecast {
             nightIcon = new ImageView(new Image(forecast.get(day).icon));
             nightIcon.setFitWidth(50);
             nightIcon.setPreserveRatio(true);
-            precipitationIcon = new ImageView(new Image("file:./assets/icons/rain.png"));
-            precipitationIcon.setFitWidth(20);
-            precipitationIcon.setPreserveRatio(true);
 
-            dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitationNight);
+            dayAndPrecipVBox = new VBox(10, dayName, labelWithIcon, precipitationIcon, precipitationNight);
             nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
 
             dayForecastBox.getChildren().addAll(dayAndPrecipVBox, space1, nightTempVBox);
@@ -137,7 +136,7 @@ public class ThreeDayForecast {
             return dayForecastButton;
         }
 
-        dayAndPrecipVBox = new VBox(10, dayName, precipitationLabel, precipitationIcon, precipitationDay, precipitationNight);
+        dayAndPrecipVBox = new VBox(10, dayName, labelWithIcon, precipitationDay, precipitationNight);
         dayTempVBox = new VBox(10, dayLabel, dayTemp, dayIcon);
         nightTempVBox = new VBox(10, nightLabel, nightTemp, nightIcon);
 
