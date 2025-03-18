@@ -16,20 +16,20 @@ import weather.Period;
 import java.util.ArrayList;
 
 public class ThreeDayForecast {
-    VBox forecastBox, dayAndPrecipVBox, dayTempVBox, nightTempVBox;
-    Scene forecastScene, detailScene;
-    Font titleFont, dayFont, precipitationLabelFont, valueFont;
-    Label threeDayForecast, dayName, precipitationDay, precipitationNight, dayTemp, nightTemp, precipitationLabel, dayLabel, nightLabel;
-    HBox dayForecastBox, labelWithIcon;
-    Button backButton, dayForecastButton;
-    ImageView dayIcon, nightIcon, precipitationIcon;
-    Region space1, space2;
-    boolean isDay;
+    private VBox forecastBox, dayAndPrecipVBox, dayTempVBox, nightTempVBox;
+    private Scene forecastScene, detailScene;
+    private Font titleFont, labelFont, precipitationLabelFont, valueFont;
+    private Label threeDayForecast, dayName, precipitationDay, precipitationNight, dayTemp, nightTemp, precipitationLabel, dayLabel, nightLabel;
+    private HBox dayForecastBox, labelWithIcon;
+    private Button backButton, dayForecastButton;
+    private ImageView dayIcon, nightIcon, precipitationIcon;
+    private Region space1, space2;
+    private boolean isDay;
 
     public ThreeDayForecast(ArrayList<Period> forecast, Stage primaryStage, Scene mainScene) {
         // 3-day forecast scene basic setting
         titleFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
-        dayFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
+        labelFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
         precipitationLabelFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
         valueFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
         threeDayForecast = new Label("3-Day Forecast");
@@ -91,12 +91,12 @@ public class ThreeDayForecast {
 
         // day and time
         dayName = new Label(forecast.get(day).name);
-        dayName.setFont(dayFont);
+        dayName.setFont(labelFont);
 
         dayLabel = new Label("Day");
-        dayLabel.setFont(dayFont);
+        dayLabel.setFont(labelFont);
         nightLabel = new Label("Night");
-        nightLabel.setFont(dayFont);
+        nightLabel.setFont(labelFont);
 
         // precipitation
         precipitationIcon = new ImageView(new Image("file:./assets/icons/rain.png"));

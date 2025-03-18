@@ -19,18 +19,18 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class JavaFX extends Application {
-	Label titleLabel, temperature, weather;
-	VBox tempBox, tempAndButton, root;
-	Font titleFont, tempFont, weatherFont, degreeFont;
-	Text degreeSymbol;
-	StackPane degreePane, titlePane, tempPane;
-	Scene mainScene, forecastScene;
-	Button more;
-	ImageView weatherIcon, background;
-	Date time;
-	String backgroundImagePath;
-	Color titleColor;
-	String iconPath, forecastText;
+	private Label titleLabel, temperature, weather;
+	private VBox tempBox, tempAndButton, root;
+	private Font titleFont, tempFont, weatherFont, degreeFont;
+	private Text degreeSymbol;
+	private StackPane degreePane, titlePane, tempPane;
+	private Scene mainScene, forecastScene;
+	private Button more;
+	private ImageView weatherIcon, background;
+	private Date time;
+	private String backgroundImagePath;
+	private Color titleColor;
+	private String iconPath;
 
 	public static void main(String[] args) {
 

@@ -5,26 +5,29 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
+import javafx.scene.text.*;
 import javafx.stage.Stage;
 import weather.Period;
 
 import java.util.ArrayList;
 
 public class ForecastDetail extends JavaFX {
-    Scene detailScene;
-    VBox detailBox;
-    Button backButton;
-    boolean isDay;
-    Label dayName, dayLabel, nightLabel;
+    private Scene detailScene;
+    private VBox root, detailBox, tempBox;
+    private Button backButton;
+    private boolean isDay;
+    private Label dayName, temperature, weather, dayLabel, nightLabel;
+    private Font titleFont, tempFont, weatherFont, degreeFont, labelFont;
+    private Text degreeSymbol;
+    private StackPane degreePane;
+    private ImageView weatherIcon;
+    private Region space;
+
+
     protected VBox DayOrNight (int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene){
-        isDay = forecast.get(day).isDaytime;
-        dayName = new Label(forecast.get(day).name);
         // back button
         backButton = new Button("Back To 3-Day Forecast");
         backButton.setOnAction(e -> primaryStage.setScene(forecastScene));
@@ -35,19 +38,9 @@ public class ForecastDetail extends JavaFX {
                 "-fx-font-size: 15px; " +
                 "-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5,0,1,1 );");
 
-        // set up background
-        time = forecast.get(day).startTime;
-        int hour = time.getHours();
-        setBackgroundAndTitleColor(hour);
-
-        // add background behind the title
-        titlePane = new StackPane();
-        titlePane.getChildren().addAll(background, titleLabel);
-        titlePane.setAlignment(Pos.CENTER);
-
         // temperature
         temperature = new Label();
-        tempFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 75);
+        tempFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 50);
         temperature.setText(String.valueOf(forecast.get(day).temperature));
         temperature.setFont(tempFont);
 
@@ -67,9 +60,12 @@ public class ForecastDetail extends JavaFX {
 
         // weather
         weather = new Label();
-        weatherFont = Font.font("San Francisco", FontWeight.SEMI_BOLD, FontPosture.REGULAR, 20);
-        weather.setText(forecast.get(day).shortForecast);
+        weatherFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
+        weather.setText(forecast.get(day).detailedForecast);
         weather.setFont(weatherFont);
+        weather.setWrapText(true);
+        weather.setTextAlignment(TextAlignment.CENTER);
+        weather.setMaxWidth(200);
 
         // icon
         weatherIcon = new ImageView(new Image(setWeatherIcon(forecast.get(day).shortForecast)));
@@ -78,46 +74,56 @@ public class ForecastDetail extends JavaFX {
         tempBox = new VBox(10);
         tempBox.getChildren().addAll(degreePane, weather, weatherIcon);
         tempBox.setAlignment(Pos.CENTER);
-        // create the main VBox with title, temperature, and weather
-        // add all elements to the VBox
-        tempAndButton = new VBox(50);
-        tempAndButton.getChildren().addAll(tempBox);
-        tempAndButton.setAlignment(Pos.CENTER);
-        tempAndButton.setPadding(new Insets(20, 20, 20, 20));
-        tempAndButton.setStyle("-fx-background-color: white; " +
-                "-fx-background-radius: 20 20 0 0; ");
-        tempAndButton.setMaxHeight(250);
-        tempAndButton.setMinHeight(250);
-        return tempAndButton;
+
+        return tempBox;
     }
     public ForecastDetail(ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene, int day) {
+        labelFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
+        dayLabel = new Label("Day");
+        dayLabel.setFont(labelFont);
+        nightLabel = new Label("Night");
+        nightLabel.setFont(labelFont);
 
         detailBox = new VBox(20);
         detailBox.setAlignment(Pos.CENTER);
-        titleFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 25);
-        titleLabel = new Label(forecast.get(day).name);
-        titleLabel.setFont(titleFont);
-        dayLabel = new Label("Day");
-        nightLabel = new Label("Night");
-        nightLabel.setFont(titleFont);
-        if(day == 0 && !(forecast.get(0).isDaytime)) {
+
+        space = new Region();
+        space.setPrefHeight(100);
+
+        isDay = forecast.get(0).isDaytime;
+        if(!isDay && day == 0) {
             detailBox.getChildren().addAll(
-                    titleLabel,
                     nightLabel,
                     DayOrNight (day, forecast, primaryStage, forecastScene),
                     backButton);
         } else {
             detailBox.getChildren().addAll(
-                    titleLabel,
+                    dayLabel,
                     DayOrNight(day, forecast, primaryStage, forecastScene),
+                    space,
                     nightLabel,
                     DayOrNight(day + 1, forecast, primaryStage, forecastScene),
                     backButton
             );
         }
+        detailBox.setMinSize(375, 500);
+        detailBox.setStyle("-fx-background-color: rgb(230, 230, 250); -fx-background-radius: 20px;");
+        detailBox.setPadding(new Insets(20,0,20,0));
 
+        root = new VBox(20);
+        root.setAlignment(Pos.CENTER);
 
-        detailScene = new Scene(detailBox, 390, 750);
+        titleFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
+        dayName = new Label(forecast.get(day).name);
+        dayName.setFont(titleFont);
+
+        root.getChildren().addAll(
+                dayName,
+                detailBox,
+                backButton
+        );
+
+        detailScene = new Scene(root, 390, 750);
     }
 
     public Scene getScene() {
