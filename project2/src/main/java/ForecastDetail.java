@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -16,18 +17,19 @@ import java.util.ArrayList;
 
 public class ForecastDetail extends JavaFX {
     private Scene detailScene;
-    private VBox root, detailBox, tempBox;
+    private VBox root, detailBox, tempBox, windBox;
     private Button backButton;
     private boolean isDay;
-    private Label dayName, temperature, weather, dayLabel, nightLabel;
+    private Label dayName, temperature, weather, dayLabel, nightLabel, windSpeed, windDirection;
     private Font titleFont, tempFont, weatherFont, degreeFont, labelFont;
     private Text degreeSymbol;
     private StackPane degreePane;
     private ImageView weatherIcon;
     private Region space;
+    private HBox weatherBox;
 
 
-    protected VBox DayOrNight (int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene){
+    protected HBox DayOrNight (int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene){
         // back button
         backButton = new Button("Back To 3-Day Forecast");
         backButton.setOnAction(e -> primaryStage.setScene(forecastScene));
@@ -61,11 +63,11 @@ public class ForecastDetail extends JavaFX {
         // weather
         weather = new Label();
         weatherFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
-        weather.setText(forecast.get(day).detailedForecast);
+        weather.setText(forecast.get(day).shortForecast);
         weather.setFont(weatherFont);
         weather.setWrapText(true);
-        weather.setTextAlignment(TextAlignment.CENTER);
-        weather.setMaxWidth(200);
+        weather.setPrefWidth(150);
+        weather.setAlignment(Pos.CENTER);
 
         // icon
         weatherIcon = new ImageView(new Image(setWeatherIcon(forecast.get(day).shortForecast)));
@@ -75,7 +77,22 @@ public class ForecastDetail extends JavaFX {
         tempBox.getChildren().addAll(degreePane, weather, weatherIcon);
         tempBox.setAlignment(Pos.CENTER);
 
-        return tempBox;
+        // wind
+        windBox = new VBox(5);
+        windSpeed = new Label();
+        windSpeed.setText("Speed: " + String.valueOf(forecast.get(day).windSpeed));
+        windSpeed.setFont(Font.font("San Francisco", FontWeight.NORMAL, 18));
+        windDirection = new Label();
+        windDirection.setText("Direction: " + String.valueOf(forecast.get(day).windDirection));
+        windDirection.setFont(Font.font("San Francisco", FontWeight.NORMAL, 18));
+        windBox.getChildren().addAll(windSpeed, windDirection);
+        windBox.setAlignment(Pos.CENTER_LEFT);
+
+        weatherBox = new HBox(50);
+        weatherBox.getChildren().addAll(tempBox, windBox);
+        weatherBox.setAlignment(Pos.CENTER);
+
+        return weatherBox;
     }
     public ForecastDetail(ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene, int day) {
         labelFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
@@ -106,9 +123,10 @@ public class ForecastDetail extends JavaFX {
                     backButton
             );
         }
-        detailBox.setMinSize(375, 500);
+        detailBox.setMaxSize(350, 500);
+        detailBox.setMinSize(350, 500);
         detailBox.setStyle("-fx-background-color: rgb(230, 230, 250); -fx-background-radius: 20px;");
-        detailBox.setPadding(new Insets(20,0,20,0));
+        detailBox.setPadding(new Insets(20,20,20,20));
 
         root = new VBox(20);
         root.setAlignment(Pos.CENTER);

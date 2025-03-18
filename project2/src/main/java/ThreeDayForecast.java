@@ -135,7 +135,7 @@ public class ThreeDayForecast {
             precipitationNight = new Label("Night:" + forecast.get(day).probabilityOfPrecipitation.value + "%");
             precipitationNight.setFont(valueFont);
 
-            dayTemp = new Label("N/A" + "°" + String.valueOf(forecast.get(0).temperatureUnit));
+            dayTemp = new Label("N/A");
             dayTemp.setFont(valueFont);
             nightTemp = new Label(forecast.get(day).temperature + "°" + String.valueOf(forecast.get(0).temperatureUnit));
             nightTemp.setFont(valueFont);
