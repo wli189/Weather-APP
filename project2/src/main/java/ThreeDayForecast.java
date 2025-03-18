@@ -28,10 +28,10 @@ public class ThreeDayForecast {
 
     public ThreeDayForecast(ArrayList<Period> forecast, Stage primaryStage, Scene mainScene) {
         // 3-day forecast scene basic setting
-        titleFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
-        labelFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
-        precipitationLabelFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
-        valueFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
+        titleFont = Font.font("Arial", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
+        labelFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
+        precipitationLabelFont = Font.font("Arial", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
+        valueFont = Font.font("Arial", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
         threeDayForecast = new Label("3-Day Forecast");
         threeDayForecast.setFont(titleFont);
         threeDayForecast.setAlignment(Pos.CENTER);

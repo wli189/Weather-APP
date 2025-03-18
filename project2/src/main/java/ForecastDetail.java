@@ -42,12 +42,12 @@ public class ForecastDetail extends JavaFX {
 
         // temperature
         temperature = new Label();
-        tempFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 50);
+        tempFont = Font.font("Arial", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 50);
         temperature.setText(String.valueOf(forecast.get(day).temperature));
         temperature.setFont(tempFont);
 
         // set up the degree symbol
-        degreeFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
+        degreeFont = Font.font("Arial", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
         degreeSymbol = new Text("°" + String.valueOf(forecast.get(day).temperatureUnit));
         degreeSymbol.setFont(degreeFont);
 
@@ -62,7 +62,7 @@ public class ForecastDetail extends JavaFX {
 
         // weather
         weather = new Label();
-        weatherFont = Font.font("San Francisco", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
+        weatherFont = Font.font("Arial", FontWeight.MEDIUM, FontPosture.REGULAR, 15);
         weather.setText(forecast.get(day).shortForecast);
         weather.setFont(weatherFont);
         weather.setWrapText(true);
@@ -82,11 +82,11 @@ public class ForecastDetail extends JavaFX {
         windBox = new VBox(5);
         windSpeed = new Label();
         windSpeed.setText("Speed: " + String.valueOf(forecast.get(day).windSpeed));
-        windSpeed.setFont(Font.font("San Francisco", FontWeight.NORMAL, 18));
+        windSpeed.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
         windSpeed.setWrapText(true);
         windDirection = new Label();
         windDirection.setText("Direction: " + String.valueOf(forecast.get(day).windDirection));
-        windDirection.setFont(Font.font("San Francisco", FontWeight.NORMAL, 18));
+        windDirection.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
         windSpeed.setWrapText(true);
         windBox.getChildren().addAll(windSpeed, windDirection);
         windBox.setAlignment(Pos.CENTER_LEFT);
@@ -98,7 +98,7 @@ public class ForecastDetail extends JavaFX {
         return weatherBox;
     }
     public ForecastDetail(ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene, int day) {
-        labelFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 15);
+        labelFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
         dayLabel = new Label("Day");
         dayLabel.setFont(labelFont);
         nightLabel = new Label("Night");
@@ -134,7 +134,7 @@ public class ForecastDetail extends JavaFX {
         root = new VBox(20);
         root.setAlignment(Pos.CENTER);
 
-        titleFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
+        titleFont = Font.font("Arial", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 25);
         dayName = new Label(forecast.get(day).name);
         dayName.setFont(titleFont);
 

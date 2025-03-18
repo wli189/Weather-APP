@@ -115,7 +115,7 @@ public class JavaFX extends Application {
 		}
 
 		// title
-		titleFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 25);
+		titleFont = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 25);
 		titleLabel = new Label("Today's weather");
 		titleLabel.setFont(titleFont);
 
@@ -131,12 +131,12 @@ public class JavaFX extends Application {
 
 		// temperature
 		temperature = new Label();
-		tempFont = Font.font("San Francisco", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 75);
+		tempFont = Font.font("Arial", FontWeight.EXTRA_BOLD, FontPosture.REGULAR, 75);
 		temperature.setText(String.valueOf(forecast.get(0).temperature));
 		temperature.setFont(tempFont);
 
 		// set up the degree symbol
-		degreeFont = Font.font("San Francisco", FontWeight.MEDIUM , FontPosture.REGULAR, 15);
+		degreeFont = Font.font("Arial", FontWeight.MEDIUM , FontPosture.REGULAR, 15);
 		degreeSymbol = new Text("°" + String.valueOf(forecast.get(0).temperatureUnit));
 		degreeSymbol.setFont(degreeFont);
 
@@ -151,7 +151,7 @@ public class JavaFX extends Application {
 
 		// weather
 		weather = new Label();
-		weatherFont = Font.font("San Francisco", FontWeight.SEMI_BOLD, FontPosture.REGULAR, 20);
+		weatherFont = Font.font("Arial", FontWeight.SEMI_BOLD, FontPosture.REGULAR, 20);
 		weather.setText(forecast.get(0).shortForecast);
 		weather.setFont(weatherFont);
 
