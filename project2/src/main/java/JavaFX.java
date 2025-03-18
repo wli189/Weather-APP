@@ -48,13 +48,13 @@ public class JavaFX extends Application {
 			titleColor = Color.rgb(255, 165, 0);
 		} else if (hour >= 18 && hour < 21) {
 			backgroundImagePath = "file:./assets/background/evening.png";
-			titleColor = Color.rgb(255, 255, 102);
+			titleColor = Color.rgb(128, 128, 128);
 		} else {
 			backgroundImagePath = "file:./assets/background/night.png";
 			titleColor = Color.WHITE;
 		}
 		background = new ImageView(new Image(backgroundImagePath));
-		background.setFitWidth(375);
+		background.setFitWidth(390);
 		background.setPreserveRatio(true);
 		titleLabel.setTextFill(titleColor); // set title color
 	}
@@ -153,7 +153,7 @@ public class JavaFX extends Application {
 		root.setStyle("-fx-background-color: white;");
 
 		// set up the scene and show the stage
-		mainScene = new Scene(root, 375, 750);
+		mainScene = new Scene(root, 390, 750);
 
 		// set up the 3-day forecast scene
 		ThreeDayForecast threeDayForecast = new ThreeDayForecast(forecast, primaryStage, mainScene);

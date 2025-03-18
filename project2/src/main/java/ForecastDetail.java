@@ -33,7 +33,7 @@ public class ForecastDetail {
                 backButton
         );
 
-        detailScene = new Scene(detailBox, 375, 750);
+        detailScene = new Scene(detailBox, 390, 750);
     }
 
     public Scene getScene() {
