@@ -49,6 +49,7 @@ public class ThreeDayForecast {
         // set up main container for the scene
         forecastBox = new VBox(30);
         forecastBox.setAlignment(Pos.CENTER);
+        forecastBox.setStyle("-fx-background-color: white;");
         forecastScene = new Scene(forecastBox, 390, 750);
 
         isDay = forecast.get(0).isDaytime;
