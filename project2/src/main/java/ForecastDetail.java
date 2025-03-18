@@ -25,7 +25,7 @@ public class ForecastDetail extends JavaFX {
     protected VBox DayOrNight (int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene){
         isDay = forecast.get(day).isDaytime;
         dayName = new Label(forecast.get(day).name);
-
+        if()
         // back button
         backButton = new Button("Back To 3-Day Forecast");
         backButton.setOnAction(e -> primaryStage.setScene(forecastScene));
@@ -35,9 +35,6 @@ public class ForecastDetail extends JavaFX {
                 "-fx-background-radius: 20; " +
                 "-fx-font-size: 15px; " +
                 "-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5,0,1,1 );");
-        titleFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 25);
-        titleLabel = new Label("Today's weather");
-        titleLabel.setFont(titleFont);
 
         // set up background
         time = forecast.get(day).startTime;
@@ -98,8 +95,12 @@ public class ForecastDetail extends JavaFX {
 
         detailBox = new VBox(20);
         detailBox.setAlignment(Pos.CENTER);
+        titleFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 25);
+        titleLabel = new Label(forecast.get(day).name);
+        titleLabel.setFont(titleFont);
 
         detailBox.getChildren().addAll(
+                titleLabel,
                 DayOrNight (day, forecast, primaryStage, forecastScene),
                 DayOrNight (day+1, forecast, primaryStage, forecastScene),
                 backButton
