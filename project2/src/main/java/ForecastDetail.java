@@ -81,11 +81,11 @@ public class ForecastDetail extends JavaFX {
         // wind
         windBox = new VBox(5);
         windSpeed = new Label();
-        windSpeed.setText("Speed: " + String.valueOf(forecast.get(day).windSpeed));
+        windSpeed.setText("Speed: \n" + String.valueOf(forecast.get(day).windSpeed));
         windSpeed.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
         windSpeed.setWrapText(true);
         windDirection = new Label();
-        windDirection.setText("Direction: " + String.valueOf(forecast.get(day).windDirection));
+        windDirection.setText("Direction: \n" + String.valueOf(forecast.get(day).windDirection));
         windDirection.setFont(Font.font("Arial", FontWeight.NORMAL, 18));
         windDirection.setWrapText(true);
         windBox.getChildren().addAll(windSpeed, windDirection);
