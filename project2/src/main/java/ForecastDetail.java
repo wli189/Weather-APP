@@ -83,9 +83,11 @@ public class ForecastDetail extends JavaFX {
         windSpeed = new Label();
         windSpeed.setText("Speed: " + String.valueOf(forecast.get(day).windSpeed));
         windSpeed.setFont(Font.font("San Francisco", FontWeight.NORMAL, 18));
+        windSpeed.setWrapText(true);
         windDirection = new Label();
         windDirection.setText("Direction: " + String.valueOf(forecast.get(day).windDirection));
         windDirection.setFont(Font.font("San Francisco", FontWeight.NORMAL, 18));
+        windSpeed.setWrapText(true);
         windBox.getChildren().addAll(windSpeed, windDirection);
         windBox.setAlignment(Pos.CENTER_LEFT);
 
