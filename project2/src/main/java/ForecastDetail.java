@@ -25,7 +25,6 @@ public class ForecastDetail extends JavaFX {
     protected VBox DayOrNight (int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene){
         isDay = forecast.get(day).isDaytime;
         dayName = new Label(forecast.get(day).name);
-        if()
         // back button
         backButton = new Button("Back To 3-Day Forecast");
         backButton.setOnAction(e -> primaryStage.setScene(forecastScene));
