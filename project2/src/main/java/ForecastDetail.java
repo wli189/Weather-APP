@@ -21,7 +21,7 @@ public class ForecastDetail extends JavaFX {
     VBox detailBox;
     Button backButton;
     boolean isDay;
-    Label dayName;
+    Label dayName, dayLabel, nightLabel;
     protected VBox DayOrNight (int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene){
         isDay = forecast.get(day).isDaytime;
         dayName = new Label(forecast.get(day).name);
@@ -97,15 +97,20 @@ public class ForecastDetail extends JavaFX {
         titleFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 25);
         titleLabel = new Label(forecast.get(day).name);
         titleLabel.setFont(titleFont);
-        if(day == 0) {
+        dayLabel = new Label("Day");
+        nightLabel = new Label("Night");
+        nightLabel.setFont(titleFont);
+        if(day == 0 && !(forecast.get(0).isDaytime)) {
             detailBox.getChildren().addAll(
                     titleLabel,
+                    nightLabel,
                     DayOrNight (day, forecast, primaryStage, forecastScene),
                     backButton);
         } else {
             detailBox.getChildren().addAll(
                     titleLabel,
                     DayOrNight(day, forecast, primaryStage, forecastScene),
+                    nightLabel,
                     DayOrNight(day + 1, forecast, primaryStage, forecastScene),
                     backButton
             );
