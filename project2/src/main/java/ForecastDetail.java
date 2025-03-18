@@ -66,7 +66,8 @@ public class ForecastDetail extends JavaFX {
         weather.setText(forecast.get(day).shortForecast);
         weather.setFont(weatherFont);
         weather.setWrapText(true);
-        weather.setPrefWidth(150);
+        weather.setPrefWidth(200);
+        weather.setPrefHeight(200);
         weather.setAlignment(Pos.CENTER);
 
         // icon
