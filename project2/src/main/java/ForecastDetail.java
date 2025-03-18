@@ -97,13 +97,20 @@ public class ForecastDetail extends JavaFX {
         titleFont = Font.font("San Francisco", FontWeight.BOLD, FontPosture.REGULAR, 25);
         titleLabel = new Label(forecast.get(day).name);
         titleLabel.setFont(titleFont);
+        if(day == 0) {
+            detailBox.getChildren().addAll(
+                    titleLabel,
+                    DayOrNight (day, forecast, primaryStage, forecastScene),
+                    backButton);
+        } else {
+            detailBox.getChildren().addAll(
+                    titleLabel,
+                    DayOrNight(day, forecast, primaryStage, forecastScene),
+                    DayOrNight(day + 1, forecast, primaryStage, forecastScene),
+                    backButton
+            );
+        }
 
-        detailBox.getChildren().addAll(
-                titleLabel,
-                DayOrNight (day, forecast, primaryStage, forecastScene),
-                DayOrNight (day+1, forecast, primaryStage, forecastScene),
-                backButton
-        );
 
         detailScene = new Scene(detailBox, 390, 750);
     }
