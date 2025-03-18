@@ -37,7 +37,7 @@ public class JavaFX extends Application {
 		launch(args);
 	}
 
-	private void setBackgroundAndTitleColor(int hour) {
+	protected void setBackgroundAndTitleColor(int hour) {
 		if (hour >= 6 && hour < 14) {
 			backgroundImagePath = "file:./assets/background/day.png";
 			titleColor = Color.rgb(70, 130, 180);

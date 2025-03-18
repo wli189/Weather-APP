@@ -78,7 +78,6 @@ public class ThreeDayForecast {
     private Button createDayForecast(int day, ArrayList<Period> forecast, Stage primaryStage, Scene forecastScene) {
         // set up more detail scene
         ForecastDetail forecastDetail = new ForecastDetail(forecast, primaryStage, forecastScene, day);
-        detailScene = forecastDetail.getScene();
 
         // set up root container for each button
         dayForecastBox = new HBox();
@@ -159,7 +158,7 @@ public class ThreeDayForecast {
         dayForecastButton = new Button("",dayForecastBox);
         dayForecastButton.setMinSize(375, 100);
         dayForecastButton.setOnAction(e -> {
-            primaryStage.setScene(detailScene);
+            primaryStage.setScene(forecastDetail.getScene());
         });
         dayForecastButton.setStyle("-fx-background-color: rgb(230, 230, 250);" +
                 "-fx-background-radius: 15px;" +
