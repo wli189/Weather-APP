@@ -27,6 +27,12 @@ public class ForecastDetail {
         // back button
         backButton = new Button("Back To 3-Day Forecast");
         backButton.setOnAction(e -> primaryStage.setScene(forecastScene));
+        backButton.setStyle("-fx-background-color: rgb(169, 169, 169); " +
+                "-fx-text-fill: white; " +
+                "-fx-font-weight: bold; " +
+                "-fx-background-radius: 20; " +
+                "-fx-font-size: 15px; " +
+                "-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5,0,1,1 );");
 
         // add all elements to the VBox
         detailBox.getChildren().addAll(

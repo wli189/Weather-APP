@@ -122,11 +122,12 @@ public class JavaFX extends Application {
 
 		more = new Button("3-Day Forecast");
 		more.setAlignment(Pos.CENTER);
-		more.setStyle("-fx-background-color: rgb(66, 135, 245); " +
+		more.setStyle("-fx-background-color: rgb(169, 169, 169); " +
 				"-fx-text-fill: white; " +
 				"-fx-font-weight: bold; " +
-				"-fx-background-radius: 20;" +
-				"-fx-font-size: 15px;");
+				"-fx-background-radius: 20; " +
+				"-fx-font-size: 15px; " +
+				"-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5,0,1,1 );");
 
 
 		// group button and tempBox
