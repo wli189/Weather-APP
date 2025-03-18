@@ -3,13 +3,10 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -33,6 +30,7 @@ public class JavaFX extends Application {
 	Date time;
 	String backgroundImagePath;
 	Color titleColor;
+	String iconPath, forecastText;
 
 	public static void main(String[] args) {
 
@@ -57,6 +55,53 @@ public class JavaFX extends Application {
 		background.setFitWidth(390);
 		background.setPreserveRatio(true);
 		titleLabel.setTextFill(titleColor); // set title color
+	}
+
+	protected String setWeatherIcon(String forecastText) {
+		iconPath = "file:./assets/icons/";
+		forecastText = forecastText.toLowerCase();
+
+		if (forecastText.contains("clear") && forecastText.contains("night")) {
+			iconPath += "clear_night.png";
+		} else if (forecastText.contains("clear") || forecastText.contains("sunny")) {
+			iconPath += "sunny.png";
+		} else if (forecastText.contains("cloudy") && forecastText.contains("partly") && forecastText.contains("night")) {
+			iconPath += "partly_cloudy_night.png";
+		} else if (forecastText.contains("cloudy") && forecastText.contains("partly")) {
+			iconPath += "partly_cloudy.png";
+		} else if (forecastText.contains("cloudy")) {
+			iconPath += "cloudy.png";
+		} else if (forecastText.contains("fog")) {
+			iconPath += "fog.png";
+		} else if (forecastText.contains("thunderstorm")) {
+			iconPath += "thunderstorm.png";
+		} else if (forecastText.contains("heavy") && forecastText.contains("snow")) {
+			iconPath += "heavy_snow.png";
+		} else if (forecastText.contains("snow")) {
+			iconPath += "snow.png";
+		} else if (forecastText.contains("heavy") && forecastText.contains("rain")) {
+			iconPath += "heavy_rain.png";
+		} else if (forecastText.contains("freezing") && forecastText.contains("rain")) {
+			iconPath += "freezing_rain.png";
+		} else if (forecastText.contains("rain")) {
+			iconPath += "rain.png";
+		} else if (forecastText.contains("drizzle") && forecastText.contains("night")) {
+			iconPath += "drizzle_night.png";
+		} else if (forecastText.contains("drizzle")) {
+			iconPath += "drizzle.png";
+		} else if (forecastText.contains("haze")) {
+			iconPath += "haze.png";
+		} else if (forecastText.contains("windy")) {
+			iconPath += "windy.png";
+		} else if (forecastText.contains("sunrise")) {
+			iconPath += "sunrise.png";
+		} else if (forecastText.contains("sunset")) {
+			iconPath += "sunset.png";
+		} else {
+			iconPath += "cloudy.png";
+		}
+
+		return iconPath;
 	}
 
 	//feel free to remove the starter code from this method
@@ -111,7 +156,7 @@ public class JavaFX extends Application {
 		weather.setFont(weatherFont);
 
 		// icon
-		weatherIcon = new ImageView(new Image(forecast.get(0).icon));
+		weatherIcon = new ImageView(new Image(setWeatherIcon(forecast.get(0).shortForecast)));
 		weatherIcon.setFitWidth(50); // resize the icon
 		weatherIcon.setPreserveRatio(true);
 

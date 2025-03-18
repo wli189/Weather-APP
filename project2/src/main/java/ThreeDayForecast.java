@@ -1,4 +1,3 @@
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -119,10 +118,11 @@ public class ThreeDayForecast {
         nightTemp.setFont(valueFont);
 
         // icon
-        dayIcon = new ImageView(new Image(forecast.get(day).icon));
+        JavaFX javaFx = new JavaFX();
+        dayIcon = new ImageView(new Image(javaFx.setWeatherIcon(forecast.get(day).shortForecast)));
         dayIcon.setFitWidth(50);
         dayIcon.setPreserveRatio(true);
-        nightIcon = new ImageView(new Image(forecast.get(day + 1).icon));
+        nightIcon = new ImageView(new Image(javaFx.setWeatherIcon(forecast.get(day + 1).shortForecast)));
         nightIcon.setFitWidth(50);
         nightIcon.setPreserveRatio(true);
 
@@ -141,7 +141,7 @@ public class ThreeDayForecast {
             nightTemp.setFont(valueFont);
 
             dayIcon = new ImageView();
-            nightIcon = new ImageView(new Image(forecast.get(day).icon));
+            nightIcon = new ImageView(new Image(javaFx.setWeatherIcon(forecast.get(day + 1).shortForecast)));
             nightIcon.setFitWidth(50);
             nightIcon.setPreserveRatio(true);
         }
