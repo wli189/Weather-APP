@@ -120,10 +120,10 @@ public class ThreeDayForecast {
         // icon
         JavaFX javaFx = new JavaFX();
         dayIcon = new ImageView(new Image(javaFx.setWeatherIcon(forecast.get(day).shortForecast)));
-        dayIcon.setFitWidth(50);
+        dayIcon.setFitWidth(30);
         dayIcon.setPreserveRatio(true);
         nightIcon = new ImageView(new Image(javaFx.setWeatherIcon(forecast.get(day + 1).shortForecast)));
-        nightIcon.setFitWidth(50);
+        nightIcon.setFitWidth(30);
         nightIcon.setPreserveRatio(true);
 
         // ignore day info if current time is night
@@ -142,7 +142,7 @@ public class ThreeDayForecast {
 
             dayIcon = new ImageView();
             nightIcon = new ImageView(new Image(javaFx.setWeatherIcon(forecast.get(day + 1).shortForecast)));
-            nightIcon.setFitWidth(50);
+            nightIcon.setFitWidth(30);
             nightIcon.setPreserveRatio(true);
         }
 
