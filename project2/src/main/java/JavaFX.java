@@ -181,9 +181,10 @@ public class JavaFX extends Application {
 		tempAndButton.setAlignment(Pos.CENTER);
 		tempAndButton.setPadding(new Insets(20, 20, 20, 20));
 		tempAndButton.setStyle("-fx-background-color: white; " +
-				"-fx-background-radius: 20 20 0 0; ");
-		tempAndButton.setMaxHeight(450);
-		tempAndButton.setMinHeight(450);
+				"-fx-background-radius: 20 20 0 0; " +
+				"-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5,0,1,1 );");
+		tempAndButton.setMaxHeight(530);
+		tempAndButton.setMinHeight(530);
 
 		// add title pane to root
 		root = new VBox();
