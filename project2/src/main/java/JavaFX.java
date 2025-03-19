@@ -154,6 +154,8 @@ public class JavaFX extends Application {
 		weatherFont = Font.font("Arial", FontWeight.SEMI_BOLD, FontPosture.REGULAR, 20);
 		weather.setText(forecast.get(0).shortForecast);
 		weather.setFont(weatherFont);
+		weather.setWrapText(true);
+		weather.setTextAlignment(TextAlignment.CENTER);
 
 		// icon
 		weatherIcon = new ImageView(new Image(setWeatherIcon(forecast.get(0).shortForecast)));
