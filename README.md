@@ -8,23 +8,31 @@
         <tr>
             <td><a href="#about">About</a></td>        
             <td><a href="#demo">Demo</a></td>
-        </tr>
-        <tr>
-            <td><a href="#contact">Contact</a></td>
+            <td><a href="#contacts">Contacts</a></td>
         </tr>
     </table>
 </dev>
 
 ## About<!-- Required -->
-Created By:
+Created By: 
 **Helmer Axel Gomez**, 
 **Weito Li**
 
 We created a weather application in Java using JavaFX. Our task was to implement a user-friendly interface that displays real-time forecasts by integrating the National Weather API. The app features dynamic icons and background changes based on current weather conditions, and it displays additional details such as wind speed and the chance of rain. We used Maven to manage dependencies and execute the application.
 
-## Demo<!-- Required -->
+## Demo
+* Main page where the user has the option to view more info 
+<img width="502" alt="Screenshot 2025-05-01 at 9 33 40 PM" src="https://github.com/user-attachments/assets/737b3308-ba14-47aa-ba82-49f2f69b15ed" />
 
+* A view of a 3-day forecast with the wind speed and precipitation
 
-## Contact
-Helmer Axel Gomez - hgome@uic.edu
-Weito Li - wli812@uic.edu
+<img width="502" alt="Screenshot 2025-05-01 at 9 33 47 PM" src="https://github.com/user-attachments/assets/fa2ad3a2-83c1-48e8-b89a-cb8ff116d76c" />
+
+* Clicking on one of the days displays a larger screen with more information on the weather
+
+<img width="502" alt="Screenshot 2025-05-01 at 9 33 55 PM" src="https://github.com/user-attachments/assets/2e3343d9-e17e-4b41-a1d1-3818e7736f89" />
+
+## Contacts
+    Helmer Axel Gomez - hgome@uic.edu
+    Weito Li - wli812@uic.edu
+
