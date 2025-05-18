@@ -5,54 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17be04bc-01bc-4ae1-97a7-901b93bc4954" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/background/afternoon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/background/day.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/background/evening.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/background/night.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/clear night.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/cloudy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/drizzle night.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/drizzle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/fog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/freezing rain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/haze.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/heavy rain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/heavy snow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/partly cloudy night.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/partly cloudy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/rain.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/snow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/sunny.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/sunrise.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/sunset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/thunderstorm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/assets/icons/windy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/ForecastDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/JavaFX.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/MyWeatherAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/ThreeDayForecast.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Elevation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Geometry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Period.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/ProbabilityOfPrecipitation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Properties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Root.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/WeatherAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2/src/test/java/MyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/background/afternoon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/background/afternoon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/background/day.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/background/day.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/background/evening.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/background/evening.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/background/night.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/background/night.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/clear night.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/clear night.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/cloudy.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/cloudy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/drizzle night.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/drizzle night.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/drizzle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/drizzle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/fog.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/fog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/freezing rain.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/freezing rain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/haze.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/haze.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/heavy rain.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/heavy rain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/heavy snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/heavy snow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/partly cloudy night.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/partly cloudy night.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/partly cloudy.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/partly cloudy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/rain.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/rain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/snow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/sunny.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/sunny.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/sunrise.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/sunrise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/sunset.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/sunset.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/thunderstorm.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/thunderstorm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/assets/icons/windy.png" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/assets/icons/windy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/ForecastDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/ForecastDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/JavaFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/JavaFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/MyWeatherAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/MyWeatherAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/ThreeDayForecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/ThreeDayForecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/Elevation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/Elevation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/Geometry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/Period.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/Period.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/ProbabilityOfPrecipitation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/ProbabilityOfPrecipitation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/Root.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/Root.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/main/java/weather/WeatherAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/main/java/weather/WeatherAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather App/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weather-App/src/test/java/MyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -83,30 +86,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/CS-342-Project-2/project2",
-    "nodejs_package_manager_path": "npm",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/brian/IdeaProjects/Weather-APP&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
-      <module name="Weather-APP" />
+      <module name="Weather-App" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Weather-APP" />
+      <module name="Weather-App" />
       <option name="filePath" />
       <method v="2" />
     </configuration>
@@ -128,9 +131,11 @@
       <option name="presentableId" value="Default" />
       <updated>1741117471326</updated>
       <workItem from="1741117473840" duration="58000" />
-      <workItem from="1747536546533" duration="22000" />
-      <workItem from="1747536572649" duration="29000" />
-      <workItem from="1747536605299" duration="11000" />
+      <workItem from="1747537001169" duration="22000" />
+      <workItem from="1747537026324" duration="15000" />
+      <workItem from="1747537255920" duration="41000" />
+      <workItem from="1747537300938" duration="13000" />
+      <workItem from="1747537322906" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -145,6 +150,29 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
