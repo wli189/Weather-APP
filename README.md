@@ -35,7 +35,7 @@ We created a weather application in Java using JavaFX. Our task was to implement
 
 ## How to Run
 ```
-git clone https://github.com/wli189/Weather-APP && cd Weather-APP/project2 && mvn compile exec:java
+git clone https://github.com/wli189/Weather-APP.git && cd Weather-APP/project2 && mvn compile exec:java
 ```
 Maven installation instructions can be found [here](https://maven.apache.org/install.html).
 
