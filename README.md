@@ -34,7 +34,7 @@ We created a weather application in Java using JavaFX. Our task was to implement
 
 ## How to Run
 ```
-git clone https://github.com/wli189/Weather-APP && cd Project2 && mvn compile exec:java
+git clone https://github.com/wli189/Weather-APP && cd Weather-APP/project2 && mvn compile exec:java
 ```
 
 ## Contacts
