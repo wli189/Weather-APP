@@ -32,6 +32,11 @@ We created a weather application in Java using JavaFX. Our task was to implement
 
 <img width="502" alt="Screenshot 2025-05-01 at 9 33 55 PM" src="https://github.com/user-attachments/assets/2e3343d9-e17e-4b41-a1d1-3818e7736f89" />
 
+## How to Run
+```
+git clone https://github.com/wli189/Weather-APP && cd Project2 && mvn compile exec:java
+```
+
 ## Contacts
     Helmer Axel Gomez - hgome@uic.edu
     Weitao Li - wli812@uic.edu
