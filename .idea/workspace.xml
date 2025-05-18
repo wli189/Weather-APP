@@ -5,7 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17be04bc-01bc-4ae1-97a7-901b93bc4954" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/background/afternoon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/background/day.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/background/evening.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/background/night.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/clear night.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/cloudy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/drizzle night.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/drizzle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/fog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/freezing rain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/haze.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/heavy rain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/heavy snow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/partly cloudy night.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/partly cloudy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/rain.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/snow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/sunny.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/sunrise.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/sunset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/thunderstorm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/assets/icons/windy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/ForecastDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/JavaFX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/MyWeatherAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/ThreeDayForecast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Elevation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Geometry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Period.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/ProbabilityOfPrecipitation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Properties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/Root.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/main/java/weather/WeatherAPI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project2/src/test/java/MyTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,22 +62,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "wli189"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wli189&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/wli189/CS-342-Project-2.git",
-    "accountId": "3e09e7a4-111b-4e06-9f07-a8f9d41217c3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wli189/Weather-APP.git&quot;,
+    &quot;accountId&quot;: &quot;3e09e7a4-111b-4e06-9f07-a8f9d41217c3&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2trkEb5G89mvyCP5vkRCgbmM0Np" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,20 +85,37 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/CS-342-Project-2/project2",
     "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Weather-APP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Weather-APP" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
       </set>
     </attachedChunks>
   </component>
@@ -64,6 +128,9 @@
       <option name="presentableId" value="Default" />
       <updated>1741117471326</updated>
       <workItem from="1741117473840" duration="58000" />
+      <workItem from="1747536546533" duration="22000" />
+      <workItem from="1747536572649" duration="29000" />
+      <workItem from="1747536605299" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
