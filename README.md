@@ -8,6 +8,7 @@
         <tr>
             <td><a href="#about">About</a></td>        
             <td><a href="#demo">Demo</a></td>
+            <td><a href="#how-to-run">How to Run</a></td>
             <td><a href="#contacts">Contacts</a></td>
         </tr>
     </table>
