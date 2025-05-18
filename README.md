@@ -34,5 +34,5 @@ We created a weather application in Java using JavaFX. Our task was to implement
 
 ## Contacts
     Helmer Axel Gomez - hgome@uic.edu
-    Weito Li - wli812@uic.edu
+    Weitao Li - wli812@uic.edu
 
