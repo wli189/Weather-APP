@@ -17,7 +17,7 @@
 ## About<!-- Required -->
 Created By: 
 **Helmer Axel Gomez**, 
-**Weito Li**
+**Weitao Li**
 
 We created a weather application in Java using JavaFX. Our task was to implement a user-friendly interface that displays real-time forecasts by integrating the National Weather API. The app features dynamic icons and background changes based on current weather conditions, and it displays additional details such as wind speed and the chance of rain. We used Maven to manage dependencies and execute the application.
 
